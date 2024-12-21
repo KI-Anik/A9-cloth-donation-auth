@@ -1,0 +1,146 @@
+[
+    {
+      "id": 1,
+      "title": "Warm Smiles for Dhaka",
+      "image": "https://via.placeholder.com/150",
+      "description": "Join us in collecting warm clothes for the homeless in Dhaka.",
+      "status": "Ongoing",
+      "contactInfo": "contact@dhaka-smiles.org",
+      "division": "Dhaka"
+    },
+    {
+      "id": 2,
+      "title": "Chittagong Winter Relief",
+      "image": "https://via.placeholder.com/150",
+      "description": "Help spread warmth among those in need in Chittagong.",
+      "status": "Completed",
+      "contactInfo": "help@chittagong-relief.org",
+      "division": "Chittagong"
+    },
+    {
+      "id": 3,
+      "title": "Rajshahi Warm Hearts Campaign",
+      "image": "https://via.placeholder.com/150",
+      "description": "Support our drive to provide blankets and warm clothes in Rajshahi.",
+      "status": "Ongoing",
+      "contactInfo": "info@rajshahi-warmhearts.org",
+      "division": "Rajshahi"
+    },
+    {
+      "id": 4,
+      "title": "Winter Aid for Sylhet",
+      "image": "https://via.placeholder.com/150",
+      "description": "Donate winter clothes for Sylhet’s underprivileged communities.",
+      "status": "Ongoing",
+      "contactInfo": "support@sylhet-aid.org",
+      "division": "Sylhet"
+    },
+    {
+      "id": 5,
+      "title": "Khulna Blanket Drive",
+      "image": "https://via.placeholder.com/150",
+      "description": "Providing warmth to Khulna residents during winter.",
+      "status": "Ongoing",
+      "contactInfo": "team@khulna-blanketdrive.org",
+      "division": "Khulna"
+    },
+    {
+      "id": 6,
+      "title": "Mymensingh Winter Support",
+      "image": "https://via.placeholder.com/150",
+      "description": "Join us in supporting Mymensingh’s vulnerable families this winter.",
+      "status": "Completed",
+      "contactInfo": "contact@mymensingh-winter.org",
+      "division": "Mymensingh"
+    },
+    {
+      "id": 7,
+      "title": "Barishal Warm Hug Campaign",
+      "image": "https://via.placeholder.com/150",
+      "description": "Distributing essential winter wear in Barishal.",
+      "status": "Ongoing",
+      "contactInfo": "connect@barishal-hug.org",
+      "division": "Barishal"
+    },
+    {
+      "id": 8,
+      "title": "Rangpur Winter Help",
+      "image": "https://via.placeholder.com/150",
+      "description": "Bring hope and warmth to Rangpur’s needy residents.",
+      "status": "Ongoing",
+      "contactInfo": "info@rangpur-help.org",
+      "division": "Rangpur"
+    },
+    {
+      "id": 9,
+      "title": "Smiles in Dhaka",
+      "image": "https://via.placeholder.com/150",
+      "description": "Ensure winter protection for homeless kids in Dhaka.",
+      "status": "Ongoing",
+      "contactInfo": "smiles@dhaka.org",
+      "division": "Dhaka"
+    },
+    {
+      "id": 10,
+      "title": "Coastal Care Chittagong",
+      "image": "https://via.placeholder.com/150",
+      "description": "Spreading hope across coastal areas of Chittagong this winter.",
+      "status": "Completed",
+      "contactInfo": "coastalcare@chittagong.org",
+      "division": "Chittagong"
+    },
+    {
+      "id": 11,
+      "title": "Rajshahi Relief Squad",
+      "image": "https://via.placeholder.com/150",
+      "description": "Join hands to provide winter aid to Rajshahi’s underprivileged.",
+      "status": "Ongoing",
+      "contactInfo": "team@rajshahi-relief.org",
+      "division": "Rajshahi"
+    },
+    {
+      "id": 12,
+      "title": "Sylhet Solidarity Movement",
+      "image": "https://via.placeholder.com/150",
+      "description": "Helping Sylhet’s most vulnerable fight the cold this winter.",
+      "status": "Ongoing",
+      "contactInfo": "movement@sylhet.org",
+      "division": "Sylhet"
+    },
+    {
+      "id": 13,
+      "title": "Warm Hearts Khulna",
+      "image": "https://via.placeholder.com/150",
+      "description": "Donate winter essentials to Khulna’s marginalized families.",
+      "status": "Ongoing",
+      "contactInfo": "warmhearts@khulna.org",
+      "division": "Khulna"
+    },
+    {
+      "id": 14,
+      "title": "United for Mymensingh",
+      "image": "https://via.placeholder.com/150",
+      "description": "Spreading smiles and warmth in Mymensingh communities.",
+      "status": "Ongoing",
+      "contactInfo": "united@mymensingh.org",
+      "division": "Mymensingh"
+    },
+    {
+      "id": 15,
+      "title": "Barishal Blanket Drive",
+      "image": "https://via.placeholder.com/150",
+      "description": "A collective effort to cover Barishal in warmth this winter.",
+      "status": "Ongoing",
+      "contactInfo": "blanketdrive@barishal.org",
+      "division": "Barishal"
+    },
+    {
+      "id": 16,
+      "title": "Winter Assistance Rangpur",
+      "image": "https://via.placeholder.com/150",
+      "description": "Ensuring winter comfort for Rangpur families in need.",
+      "status": "Completed",
+      "contactInfo": "winterhelp@rangpur.org",
+      "division": "Rangpur"
+    }
+  ]
