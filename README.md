@@ -1,8 +1,25 @@
-# React + Vite
+# Winter Cloth Donation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Purpose
+The **Winter Cloth Donation** project is designed to provide a platform to organize and manage cloth donation campaigns for underprivileged communities during winter. The goal is to connect donors with those in need while keeping the process streamlined and transparent.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live URL
+[**Winter Cloth Donation Platform**](#)  
+
+---
+
+## Key Features
+1. **User Authentication**: Firebase Authentication for secure login and registration.
+2. **Division-Wise Campaigns**: Categorization of campaigns based on the 8 divisions of Bangladesh.
+3. **Responsive Design**: Built with Tailwind CSS for responsive and mobile-friendly design.
+4. **Reusable UI Components**: Designed using DaisyUI components for quick development.
+5. **Routing**: Efficient navigation implemented with React Router.
+
+---
+
+## NPM Packages Used
+1. **React**: Library for building user interfaces.
+   ```bash
+   npm install react react-dom

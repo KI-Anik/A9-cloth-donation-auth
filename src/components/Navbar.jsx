@@ -2,12 +2,12 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
 
-    const links = <>
+    const links = <div className="font-bold flex text-xl">
     <li><NavLink to={'/home'}>Home</NavLink></li>
     <li><NavLink to={'/donation'}>Donation</NavLink></li>
     <li><NavLink to={'/help'}>How to Help</NavLink></li>
     <li><NavLink to={'/dashboard'}>Dashboard</NavLink></li>
-    </>
+    </div>
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -33,7 +33,7 @@ const Navbar = () => {
         {links}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">BDCOT</a>
+    <a className="btn btn-ghost text-2xl bg-green-500 text-red-600">BDCOT</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
