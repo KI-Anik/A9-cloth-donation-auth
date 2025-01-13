@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import Navbar from "../Navbar";
 
 const Details = () => {
     const { id } = useParams()
@@ -6,17 +7,19 @@ const Details = () => {
     const data = useLoaderData()
 
     const singleCard = data.find(card => card.id === pId)
-    const { title, image } = singleCard
-    console.log(id, data)
+    const {title, image,division,status } = singleCard
 
-
+        const handleBtn=()=>{
+            alert('Thank you ! We will reach your destination soon')
+        }
     return (
         <div>
+            <Navbar></Navbar>
             <div className="hero bg-base-200 min-h-screen">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     
                     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                        <form className="card-body">
+                        <form  className="card-body">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Quantity of item</span>
@@ -46,7 +49,7 @@ const Details = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary">Submit</button>
+                                <button onClick={handleBtn} className="btn btn-primary">Submit</button>
                             </div>
                         </form>
                     </div>
@@ -54,8 +57,10 @@ const Details = () => {
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold">{title}</h1>
                         <p className="py-6">
-                           <img src={image} alt="" />
+                           <img src={image} alt="photo" />
                         </p>
+                        <p>Division: {division}</p>
+                        <p>Status: {status}</p>
                     </div>
                 </div>
             </div>
