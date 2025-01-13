@@ -7,7 +7,7 @@ const Details = () => {
     const data = useLoaderData()
 
     const singleCard = data.find(card => card.id === pId)
-    const {title, image,division,status } = singleCard
+    const {title, image,division,description,contactInfo,status } = singleCard
 
         const handleBtn=()=>{
             alert('Thank you ! We will reach your destination soon')
@@ -59,8 +59,12 @@ const Details = () => {
                         <p className="py-6">
                            <img src={image} alt="photo" />
                         </p>
+                        <p className="text-lg font-semibold text-amber-600">{description}</p>
+                        <div className="text-green-600 font-semibold">
                         <p>Division: {division}</p>
                         <p>Status: {status}</p>
+                        <p>Contact-Info: {contactInfo}</p>
+                        </div>
                     </div>
                 </div>
             </div>

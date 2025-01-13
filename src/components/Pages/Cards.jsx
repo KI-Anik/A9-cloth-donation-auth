@@ -2,7 +2,7 @@ import { Link,  } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Navbar from "../Navbar";
 
-const Donation = () => {
+const Cards = () => {
     const [cards,setCards] = useState([])
 
     useEffect(()=>{
@@ -10,6 +10,10 @@ const Donation = () => {
         .then(res =>res.json())
         .then(data => setCards(data) )
     },[])
+
+    const handlebtn=()=> {
+        alert('please login first')
+    }
     return (
         <div className="container mx-auto">
             <Navbar></Navbar>
@@ -32,7 +36,7 @@ const Donation = () => {
                             <p>{singleData.description}</p>
                             <div className="card-actions">
                                 <Link to={`/details/${singleData.id}`}>
-                                <button className="btn btn-primary">Donate Now</button>
+                                <button onClick={handlebtn} className="btn btn-primary">Donate Now</button>
                                 </Link>
                             </div>
                         </div>
@@ -43,4 +47,4 @@ const Donation = () => {
     );
 };
 
-export default Donation;
+export default Cards;

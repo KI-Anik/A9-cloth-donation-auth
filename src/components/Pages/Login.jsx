@@ -1,19 +1,36 @@
+import { useContext } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Login = () => {
+    const {setUser, login} = useContext(AuthContext)
+    const locaton = useLocation()
+    const navigate = useNavigate()
+
     const handleSubmit=(e)=>{
         e.preventDefault()
         const form= e.target;
         const email = form.email.value
         const password = form.password.value
         console.log(email,password)
+
+        //login
+        login(email,password)
+        .then(result => {
+            setUser(result.user)
+            navigate(locaton?.state? locaton.state : '/')
+        })
+        .catch(err => {
+            console.log(err.message)
+        })
     }
     return (
-        <div className="hero bg-base-200 min-h-screen">
-  <div className="hero-content flex-col lg:flex-row-reverse">
+        <div className="hero bg-base-200 min-h-screen ">
+  <div className="hero-content flex-col ">
     <div className="text-center lg:text-left">
       <h1 className="text-5xl font-bold">Login now!</h1>
     </div>
-    <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+    <div className="card bg-base-100  shrink-0 p-5 shadow-2xl">
       <form onSubmit={handleSubmit} className="card-body">
         <div className="form-control">
         <label className="label">
@@ -34,6 +51,7 @@ const Login = () => {
           <button className="btn btn-primary">Login</button>
         </div>
       </form>
+          <p className="text-center text-lg">New here? <Link to={'/auth/register'} className="link text-blue-500">Registration</Link> first </p>
     </div>
   </div>
 </div>

@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import HomelLayout from "../components/layout/HomelLayout";
-import Donation from "../components/Pages/Donation";
+import Cards from "../components/Pages/Cards";
 import Details from "../components/Pages/Details";
 import PrivateRoute from "./PrivateRoute";
 import AuthLayout from "../components/layout/AuthLayout";
@@ -13,8 +13,8 @@ const Router = createBrowserRouter([
         element: <HomelLayout></HomelLayout>,
     },
     {
-        path: 'donation',
-        element: <Donation></Donation>
+        path: 'donationCards',
+        element: <Cards></Cards>
     },
     {
         path: 'details/:id',
