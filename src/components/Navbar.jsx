@@ -5,10 +5,11 @@ import userIcon from '../assets/user.png'
 
 const Navbar = () => {
   const {user, logOut,} = useContext(AuthContext)
+  console.log(user)
 
     const links = <div className="font-bold flex text-xl">
     <li><NavLink to={'/'}>Home</NavLink></li>
-    <li><NavLink to={'/donationCards'}>Donation</NavLink></li>
+    <li><NavLink to={'/donationCam'}>Donation</NavLink></li>
     <li><NavLink to={'/help'}>How to Help</NavLink></li>
     <li><NavLink to={'/dashboard'}>Dashboard</NavLink></li>
     <li><NavLink to={'/auth/register'}>Register</NavLink></li>
@@ -52,7 +53,7 @@ const Navbar = () => {
                         user && user?.email ?
                             <div>
                                 <img className="w-10 rounded-full" src={user.photoURL} alt="profile photo" />
-                                <p>{user?.email}</p>
+                                <p>{user?.displayName}</p>
                             </div>
                             :
                             <img src={userIcon} alt="icon" />
@@ -61,7 +62,7 @@ const Navbar = () => {
                 </div>
                 {
                     user && user.email ?
-                        <button onClick={logOut} className="btn btn-neutral rounded-none">logOut</button>
+                        <button onClick={logOut} className="btn btn-neutral rounded-none">log-Out</button>
                         :
                         <Link to={'/auth/login'} className="btn btn-neutral rounded-none">Login</Link>
 

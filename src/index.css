@@ -2,35 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-.active{
+.active {
   text-decoration: underline;
   background-color: aqua;
 }
 
 /* banner css start  */
 .swiper {
-    height: 70vh;
-  }
-  
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-  
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 80px;
-  }
-  
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 70%;
-  }
+  height: 70vh;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 70%;
+}
 
 /* extraTWOsec css start  */
-
-
-  

@@ -19,7 +19,8 @@ import { GiConfirmed } from "react-icons/gi";
 import { FaMapLocation } from "react-icons/fa6";
 import ExtraTwoSec from "./Pages/Home/ExtraTwoSec";
 
-export default function Banner() {
+
+export default function Home() {
   return (
     <>
       {/* index.css */}

@@ -1,5 +1,4 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import Navbar from "../Navbar";
 
 const Details = () => {
     const { id } = useParams()
@@ -14,7 +13,6 @@ const Details = () => {
         }
     return (
         <div>
-            <Navbar></Navbar>
             <div className="hero bg-base-200 min-h-screen">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     
@@ -44,6 +42,13 @@ const Details = () => {
                                     <span className="label-text">Item type</span>
                                 </label>
                                 <input type="text" placeholder="e.g., blanket, jacket, sweater" className="input input-bordered" required />
+                               
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Additional notes  (optional)</span>
+                                </label>
+                                <input type="text" placeholder="notes" className="input input-bordered p-10" required />
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>

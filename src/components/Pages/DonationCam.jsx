@@ -1,33 +1,32 @@
-import { Link,  } from "react-router-dom";
+import { Link, } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Navbar from "../Navbar";
 
-const Cards = () => {
-    const [cards,setCards] = useState([])
+const DonationCam = () => {
+    const [cards, setCards] = useState([])
 
-    useEffect(()=>{
-        fetch('/fakeData.json')
-        .then(res =>res.json())
-        .then(data => setCards(data) )
-    },[])
 
-    const handlebtn=()=> {
-        alert('please login first')
-    }
+    useEffect(() => {
+        async function fetchData() {
+            const response = await fetch('/fakeData.json');
+            const data = await response.json();
+            setCards(data);
+        }
+        fetchData();
+    }, [])
+
     return (
         <div className="container mx-auto">
-            <Navbar></Navbar>
             <div>
                 <h1>donation</h1>
                 <p></p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3">
-                {cards.map((singleData) => 
+                {cards.map((singleData) =>
                     <div key={singleData.id} className="card bg-base-100 m-5 gap-5 shadow-2xl">
                         <figure className="px-10 pt-10">
                             <img
-                            src={singleData.image}
+                                src={singleData.image}
                                 alt="donation image"
                                 className="rounded-xl" />
                         </figure>
@@ -36,7 +35,7 @@ const Cards = () => {
                             <p>{singleData.description}</p>
                             <div className="card-actions">
                                 <Link to={`/details/${singleData.id}`}>
-                                <button onClick={handlebtn} className="btn btn-primary">Donate Now</button>
+                                    <button className="btn btn-primary">Donate Now</button>
                                 </Link>
                             </div>
                         </div>
@@ -47,4 +46,4 @@ const Cards = () => {
     );
 };
 
-export default Cards;
+export default DonationCam;
