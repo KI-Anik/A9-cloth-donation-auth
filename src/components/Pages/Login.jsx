@@ -1,29 +1,48 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { toast } from "react-toastify";
+import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
-    const {setUser, login} = useContext(AuthContext)
-    const locaton = useLocation()
+    const {setUser, login, loginWithGoogle} = useContext(AuthContext)
+    const location = useLocation()
     const navigate = useNavigate()
+    console.log(location)
 
     const handleSubmit=(e)=>{
         e.preventDefault()
         const form= e.target;
         const email = form.email.value
         const password = form.password.value
+        if(password.length < 6 ){
+          toast('password must be at least 6 character')
+          return
+        }
         console.log(email,password)
 
         //login
         login(email,password)
         .then(result => {
             setUser(result.user)
-            navigate(locaton?.state? locaton.state : '/')
+            navigate(location?.state? location.state : '/')
         })
         .catch(err => {
-            console.log(err.message)
+            toast.error(err.code)
         })
     }
+
+    const handleGoogle = () => {
+      loginWithGoogle()
+      .then(result=> {
+        console.log(result.user)
+        navigate(location?.state? location.state : '/')
+      })
+      .catch(err => {
+        console.log(err.message)
+      })
+    }
+
     return (
         <div className="hero bg-base-200 min-h-screen ">
   <div className="hero-content flex-col ">
@@ -52,6 +71,7 @@ const Login = () => {
         </div>
       </form>
           <p className="text-center text-lg">New here? <Link to={'/auth/register'} className="link text-blue-500">Registration</Link> first </p>
+    <button onClick={handleGoogle} className="btn mt-4"><FaGoogle></FaGoogle> Contionue With Google</button>
     </div>
   </div>
 </div>

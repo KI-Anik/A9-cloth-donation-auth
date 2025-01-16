@@ -1,10 +1,13 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { FaGoogle } from "react-icons/fa";
 
 const Register = () => {
-  const { setUser, createNewUser, updateUserProfile } = useContext(AuthContext)
+  const { setUser, createNewUser, updateUserProfile, loginWithGoogle } = useContext(AuthContext)
   const navigate = useNavigate()
+  const [error, setError] = useState([])
+  console.log(location)
 
 
   const handleSubmit = (e) => {
@@ -14,11 +17,16 @@ const Register = () => {
     const photo = form.photo.value
     const email = form.email.value
     const password = form.password.value
+    if (password.length < 5) {
+      setError('password should be at least 6 character long')
+      return
+    }
     console.log({ name, photo, email, password })
 
     // authentication start
     createNewUser(email, password)
       .then(result => {
+        setError()
         setUser(result.user)
 
         // profile start
@@ -33,11 +41,21 @@ const Register = () => {
       })
 
       .catch(err => {
-        alert(err.message)
+        console.log(err.message)
       })
     // authentication end
   }
 
+  const handleGoogle = () => {
+    loginWithGoogle()
+      .then(result => {
+        setUser(result.user)
+        navigate('/')
+      })
+      .catch(err => {
+        console.log(err.message)
+      })
+  }
 
   return (
     <div className="flex flex-col  justify-center items-center min-h-screen">
@@ -67,11 +85,16 @@ const Register = () => {
               <span className="label-text">Password</span>
             </label>
             <input name='password' type="password" placeholder="password" className="input input-bordered" required />
+            {
+              error && <p className='text-sm text-red-500'>{error}</p>
+            }
           </div>
           <div className="form-control mt-6">
             <button className="btn btn-primary">Register</button>
           </div>
-          <p className="text-center text-lg p-2">Already have an account? <Link to={'/auth/login'} className="link text-blue-500">Login</Link> </p>
+          <p className="text-center text-lg">Already have an account? <Link to={'/auth/login'} className="link text-blue-500">Login</Link> </p>
+          <button onClick={handleGoogle} className="btn mt-4"><FaGoogle></FaGoogle> Contionue With Google</button>
+
         </form>
 
       </div>

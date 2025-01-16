@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 const DonationCam = () => {
     const [cards, setCards] = useState([])
 
-
     useEffect(() => {
         async function fetchData() {
             const response = await fetch('/fakeData.json');
