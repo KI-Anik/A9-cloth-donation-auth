@@ -7,8 +7,6 @@ const Register = () => {
   const { setUser, createNewUser, updateUserProfile, loginWithGoogle } = useContext(AuthContext)
   const navigate = useNavigate()
   const [error, setError] = useState([])
-  console.log(location)
-
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -17,8 +15,13 @@ const Register = () => {
     const photo = form.photo.value
     const email = form.email.value
     const password = form.password.value
-    if (password.length < 5) {
-      setError('password should be at least 6 character long')
+    
+    // reset error
+    setError()
+
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/
+    if (!passwordRegex.test(password)) {
+      setError('password should be at least one uppercase, one lowercase and 6 character long')
       return
     }
     console.log({ name, photo, email, password })

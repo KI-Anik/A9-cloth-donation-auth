@@ -2,11 +2,15 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "./provider/AuthProvider";
 import userIcon from '../assets/user.png'
+import Loading from "./loading";
 
 const Navbar = () => {
-  const {user, logOut,} = useContext(AuthContext)
+  const {user, logOut, loading} = useContext(AuthContext)
   console.log(user)
 
+  if(loading){
+    return <Loading></Loading>
+  }
     const links = <div className="font-bold flex text-xl">
     <li><NavLink to={'/'}>Home</NavLink></li>
     <li><NavLink to={'/donationCam'}>Donation</NavLink></li>
