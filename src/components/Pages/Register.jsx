@@ -1,12 +1,13 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
-import { FaGoogle } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 
 const Register = () => {
   const { setUser, createNewUser, updateUserProfile, loginWithGoogle } = useContext(AuthContext)
   const navigate = useNavigate()
   const [error, setError] = useState([])
+  const [showPassword, setShowPassword] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -83,11 +84,17 @@ const Register = () => {
             </label>
             <input name='email' type="email" placeholder="email" className="input input-bordered" required />
           </div>
-          <div className="form-control">
+          <div className="form-control relative">
             <label className="label">
               <span className="label-text">Password</span>
             </label>
-            <input name='password' type="password" placeholder="password" className="input input-bordered" required />
+            <input name='password' type={showPassword ? "text" : "password"} placeholder="password" className="input input-bordered" required />
+            <p onClick={()=> setShowPassword(!showPassword)}
+             className="absolute right-3 top-12 cursor-pointer">
+            {
+              showPassword?  <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+            }
+            </p>
             {
               error && <p className='text-sm text-red-500'>{error}</p>
             }

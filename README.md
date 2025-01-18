@@ -19,6 +19,22 @@ The **Winter Cloth Donation** project is designed to provide a platform to organ
 
 ---
 
+✨ Key Features
+
+🔒 User Authentication: Secure user authentication using Firebase.
+
+👤 Profile Management: Users can update their profile information (e.g., name and photo).
+
+📊 Donation Tracking: Keep track of donated items and view donation history.
+
+📱 Responsive Design: Fully responsive layout using Tailwind CSS and DaisyUI.
+
+🎨 Animations: Smooth animations powered by AOS (Animate on Scroll).
+
+🔔 Notifications: Real-time user notifications using React-Toastify.
+
+🌍 Social Sharing: Easily share the platform via integrated social media icons.
+
 ## NPM Packages Used
 1. **React**: Library for building user interfaces.
    ```bash

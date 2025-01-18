@@ -51,9 +51,9 @@ const Login = () => {
     }
     else {
       resetPassword(email)
-      .then(()=>{
-        toast('password reset email send, please check your email')
-      })
+        .then(() => {
+          toast('password reset email send, please check your email')
+        })
 
     }
   }
