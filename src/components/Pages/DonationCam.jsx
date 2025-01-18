@@ -15,9 +15,9 @@ const DonationCam = () => {
 
     return (
         <div className="container mx-auto">
-            <div>
-                <h1>donation</h1>
-                <p></p>
+            <div className="w-3/5 text-center mx-auto p-8">
+                <h1 className="text-4xl font-bold text-green-500 ">Give People Physical and Emotional Warmth By donate clothes to homeless</h1>
+                <p className="text-xl m-3">Share warmth, and donate gently used winter clothing. Help those in need stay cozy during the cold months. Make a difference by joining the best charity to donate clothes.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3">

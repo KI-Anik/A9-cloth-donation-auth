@@ -3,7 +3,7 @@ import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 import {
     createUserWithEmailAndPassword, getAuth,
-    GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword,
+    GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword,
     signInWithPopup, signOut,
     updateProfile
 } from "firebase/auth";
@@ -38,6 +38,10 @@ const AuthProvider = ({ children }) => {
         return updateProfile(auth.currentUser, updateData)
     }
 
+    const resetPassword = (email)=> {
+        return sendPasswordResetEmail(auth, email)
+    }
+
     const authInfo = {
         user,
         setUser,
@@ -46,7 +50,8 @@ const AuthProvider = ({ children }) => {
         loginWithGoogle,
         logOut,
         updateUserProfile,
-        loading
+        loading,
+        resetPassword
     }
 
     useEffect(() => {

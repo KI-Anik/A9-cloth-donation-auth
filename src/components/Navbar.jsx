@@ -15,7 +15,10 @@ const Navbar = () => {
     <li><NavLink to={'/'}>Home</NavLink></li>
     <li><NavLink to={'/donationCam'}>Donation</NavLink></li>
     <li><NavLink to={'/help'}>How to Help</NavLink></li>
+    {
+      user && 
     <li><NavLink to={'/dashboard'}>Dashboard</NavLink></li>
+    }
     <li><NavLink to={'/auth/register'}>Register</NavLink></li>
     </div>
     return (
