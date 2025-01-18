@@ -19,8 +19,16 @@ import { GiConfirmed } from "react-icons/gi";
 import { FaMapLocation } from "react-icons/fa6";
 import ExtraTwoSec from "./Pages/Home/ExtraTwoSec";
 
+import Aos from "aos";
+import "aos/dist/aos.css"
+import { useEffect } from "react";
 
 export default function Home() {
+
+  useEffect(() => {
+    Aos.init({duration:1500})
+  }, [])
+
   return (
     <>
       {/* index.css */}
@@ -47,8 +55,8 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 pt-14 ">
-          <img src={banner4} alt="" />
-          <div className="space-y-5">
+          <img data-aos="fade-right" src={banner4} alt="" />
+          <div className="space-y-5" data-aos="fade-left">
             <h3 className="text-3xl font-semibold">Your gift will bring smiles to more children like Sahar</h3>
             <p>Amidst an ongoing conflict and back-to-back earthquakes, families like Sahar’s are living in a state of constant stress and cannot afford basic <br />essentials. And with winter temperatures in many areas of Afghanistan dropping as low as -20 degrees Celsius, it’s critical that children receive warm clothes and blankets in time. Without them, children are at risk of developing life-threatening illnesses, like pneumonia. <br />
 
@@ -71,21 +79,21 @@ export default function Home() {
 
         <div className="grid md:grid-cols-3 justify-center items-center gap-5">
           {/* 1st card */}
-          <div className="p-5 bg-white shadow-xl space-y-2">
+          <div className="p-5 bg-white shadow-xl space-y-2" data-aos="fade-down-right">
             <FaSearch className="text-3xl mx-auto"></FaSearch>
             <h2 className="text-xl font-semibold">step 1: Find a Camp</h2>
             <p>select a donation camp near you and view the details.</p>
           </div>
 
           {/*2nd card */}
-          <div className="p-5 bg-white shadow-xl space-y-2">
+          <div className="p-5 bg-white shadow-xl space-y-2" data-aos="zoom-in-down">
             <FaWpforms className="text-3xl mx-auto"></FaWpforms>
             <h2 className="text-xl font-semibold">step 2: Fill the form</h2>
             <p>provide the neccessary details about your donation. </p>
           </div>
 
           {/* 3rd card */}
-          <div className="p-5 bg-white shadow-xl space-y-2">
+          <div className="p-5 bg-white shadow-xl space-y-2" data-aos="fade-down-left">
             <GiConfirmed className="text-3xl mx-auto"></GiConfirmed>
             <h2 className="text-xl font-semibold">step 3: Confirm Donation</h2>
             <p>submit your donation and receive a confirmation message.</p>
