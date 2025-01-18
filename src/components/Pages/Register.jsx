@@ -15,7 +15,7 @@ const Register = () => {
     const photo = form.photo.value
     const email = form.email.value
     const password = form.password.value
-    
+
     // reset error
     setError()
 
