@@ -22,6 +22,7 @@ import ExtraTwoSec from "./Pages/Home/ExtraTwoSec";
 import Aos from "aos";
 import "aos/dist/aos.css"
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
 
@@ -65,7 +66,7 @@ export default function Home() {
               Donate now to help a child stay warm this winter.</p> <br />
 
             {/* btn here */}
-            <button className="btn bg-orange-400 hover:text-green-600 text-white text-xl font-bold">Send Warmth Now</button>
+            <Link to={'/donationCam'} className="btn bg-orange-400 hover:text-green-600 text-white text-xl font-bold">Send Warmth Now</Link>
 
             <p>Millions of children around the world are counting on our support to stay warm this winter. With your help, we can ensure they have the essentials they need to make it through the harsh, cold months ahead.</p>
           </div>

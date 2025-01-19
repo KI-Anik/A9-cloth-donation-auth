@@ -8,6 +8,7 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Pagination } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 
 
 const ExtraTwoSec = () => {
@@ -67,7 +68,7 @@ const ExtraTwoSec = () => {
 
             </Swiper>
 
-            <button className='btn bg-orange-400 hover:text-green-600 text-white text-xl my-8 font-bold'>Donate Now</button>
+            <Link to={'/donationCam'} className='btn bg-orange-400 hover:text-green-600 text-white text-xl my-8 font-bold'>Donate Now</Link>
 
 
             {/* LAST SECTION start */}

@@ -11,7 +11,8 @@ createRoot(document.getElementById('root')).render(
     <ToastContainer
     position="top-center"
     autoClose={2000}
-    closeOnClick={false}
+    closeOnClick={true}
+    pauseOnFocusLoss={false}
     ></ToastContainer>
     <AuthProvider>
     <RouterProvider router={Router}></RouterProvider>

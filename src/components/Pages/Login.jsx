@@ -20,10 +20,22 @@ const Login = () => {
       toast('password must be at least 6 character')
       return
     }
-    console.log(email, password)
 
     //login
     login(email, password)
+      .then(result => {
+        setUser(result.user)
+        navigate(location?.state ? location.state : '/')
+        toast.success('logged in')
+      })
+      .catch(err => {
+        toast.error(err.message)
+      })
+  }
+
+  // social login function
+  const handleGoogle = () => {
+    loginWithGoogle()
       .then(result => {
         setUser(result.user)
         navigate(location?.state ? location.state : '/')
@@ -33,26 +45,15 @@ const Login = () => {
       })
   }
 
-  const handleGoogle = () => {
-    loginWithGoogle()
-      .then(result => {
-        console.log(result.user)
-        navigate(location?.state ? location.state : '/')
-      })
-      .catch(err => {
-        console.log(err.message)
-      })
-  }
-
   const handleForgetPassword = () => {
     const email = emailRef.current.value
     if (!email) {
-      toast('please provide a valid email address')
+      toast.warning('please provide a valid email address')
     }
     else {
       resetPassword(email)
         .then(() => {
-          toast('password reset email send, please check your email')
+          toast.info('password reset email send, please check your email')
         })
 
     }

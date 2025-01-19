@@ -6,12 +6,11 @@ import Loading from "./loading";
 
 const Navbar = () => {
   const { user, logOut, loading } = useContext(AuthContext)
-  console.log(user)
 
   if (loading) {
     return <Loading></Loading>
   }
-  const links = <div className="font-bold flex text-xl">
+  const links = <div className="font-bold md:flex text-xl">
     <li><NavLink to={'/'}>Home</NavLink></li>
     <li><NavLink to={'/donationCam'}>Donation</NavLink></li>
     <li><NavLink to={'/help'}>How to Help</NavLink></li>
@@ -42,11 +41,11 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow">
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-2xl bg-green-500 text-red-600">BDCOT</a>
+          <a href="/" className="btn btn-ghost text-2xl bg-green-500 text-red-600">BDCOT</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">

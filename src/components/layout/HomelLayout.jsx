@@ -6,10 +6,10 @@ const HomelLayout = () => {
     return (
         <div className="container mx-auto">
             <Navbar></Navbar>
-           <div className="min-h-[calc(100vh-305px)]">
-           <Outlet></Outlet>
-           </div>
-           <Footer></Footer>
+            <div className="min-h-[calc(100vh-290px)] ">
+                <Outlet></Outlet>
+            </div>
+            <Footer></Footer>
         </div>
     );
 };

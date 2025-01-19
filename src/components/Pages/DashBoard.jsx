@@ -24,7 +24,7 @@ const Dashboard = () => {
             photoURL: userInfo.photo,
         })
             .then(() => {
-                toast("Profile updated successfully!");
+                toast("Saved!");
                 setIsModalOpen(false);
             })
             .catch((err) => {
@@ -33,11 +33,11 @@ const Dashboard = () => {
     };
 
     return (
-        <div className="text-center">
+        <div className="text-center card bg-base-100 shadow-xl space-y-3 pt-10">
             <h1 className="text-2xl font-semibold">
                 Welcome &quot;{user?.displayName}&quot;
             </h1>
-            <div className="card bg-base-100 shadow-xl mx-auto pt-10">
+            <div className="">
                 <figure className="px-10 w-40 mx-auto">
                     <img
                         src={user?.photoURL}
@@ -59,6 +59,7 @@ const Dashboard = () => {
                         </button>
                     </div>
                 </div>
+
             </div>
 
             {isModalOpen && (
@@ -88,7 +89,7 @@ const Dashboard = () => {
                         <div className="flex justify-end space-x-4">
                             <button
                                 onClick={handleUpdateProfile}
-                                className="btn btn-primary"
+                                className="btn btn-accent"
                             >
                                 Save
                             </button>
