@@ -33,7 +33,7 @@ const Dashboard = () => {
     };
 
     return (
-        <div className="text-center card bg-base-100 shadow-xl space-y-3 pt-10">
+        <div className="text-center space-y-3 pt-10">
             <h1 className="text-2xl font-semibold">
                 Welcome &quot;{user?.displayName}&quot;
             </h1>

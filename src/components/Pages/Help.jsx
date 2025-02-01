@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Help = () => {
     return (
-        <div className="w-3/5 mx-auto text-center space-y-5 shadow-xl p-5 mb-5">
+        <div className="w-3/5 mx-auto text-center space-y-5 shadow-xl p-5">
             <div >
                 <h1 className="text-3xl font-bold">How to help</h1>
                 <p className="text-gray-400 font-semibold">Your kindness can bring warm and hope to other. Here&apos;s how you can help</p>
