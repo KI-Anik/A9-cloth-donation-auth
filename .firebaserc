@@ -1,5 +1,16 @@
 {
-  "projects": {
-    "default": "phero-4add4"
-  }
+  "projects": {},
+  "targets": {
+    "phero-4add4": {
+      "hosting": {
+        "bdcot-cloth-donation": [
+          "bdcot-cloth-donation"
+        ],
+        "phero-4add4": [
+          "phero-4add4"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
